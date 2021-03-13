@@ -2,9 +2,9 @@ using DeliVeggie.Models.Enums;
 
 namespace DeliVeggie.Models.Requests
 {
-    public class RequestMessage <T>
+    public class RequestMessage<T> : IRequestMessages
     {
-        private RequestType RequestType { get; set; }
-        private T Payload { get; set; }
+        public RequestType RequestType { get; set; }
+        public T Payload { get; set; }
     }
 }
