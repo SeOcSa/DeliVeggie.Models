@@ -9,8 +9,7 @@ namespace DeliVeggie.Models.Requests
             switch (requestType)
             {
                 case RequestType.ProductsRequest:
-                    return new RequestMessage<string>
-                        {RequestType = RequestType.ProductsRequest, Payload = string.Empty};
+                    return new RequestMessage<string> {RequestType = RequestType.ProductsRequest, Payload = string.Empty};
                 case RequestType.ProductDetailsRequest:
                     return new RequestMessage<string>{ RequestType = RequestType.ProductDetailsRequest, Payload = string.Empty};
                 default:
