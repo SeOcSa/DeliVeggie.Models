@@ -1,1 +1,6 @@
 *.idea
+/DeliVeggie.Models/bin/Debug/netcoreapp3.1/DeliVeggie.Models.dll
+/DeliVeggie.Models/bin/Debug/netcoreapp3.1/DeliVeggie.Models.pdb
+/DeliVeggie.Models/obj/Debug/netcoreapp3.1/DeliVeggie.Models.csprojAssemblyReference.cache
+/DeliVeggie.Models/obj/Debug/netcoreapp3.1/DeliVeggie.Models.dll
+/DeliVeggie.Models/obj/Debug/netcoreapp3.1/DeliVeggie.Models.pdb
