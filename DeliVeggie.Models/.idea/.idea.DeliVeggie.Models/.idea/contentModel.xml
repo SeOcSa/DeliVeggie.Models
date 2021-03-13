@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Personal\Dev\products-dev\DeliVeggie.Models\DeliVeggie.Models\DeliVeggie.Models" t="IncludeFlat">
+      <e p="DeliVeggie.Models.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\sebastian.sas\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sebastian.sas\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_DeliVeggie.Models.798846960.00" t="ExcludeRecursive" />
+  </component>
+</project>
