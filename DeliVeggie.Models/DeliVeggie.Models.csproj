@@ -2,9 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
-    <PropertyGroup>
-        <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    </PropertyGroup>
-
 </Project>
