@@ -4,16 +4,16 @@ namespace DeliVeggie.Models.Requests
 {
     public class RequestMessageFactory
     {
-        public IRequestMessages GetRequestMessages(RequestType requestType)
+        public RequestMessage GetRequestMessages(RequestType requestType, string id = null)
         {
             switch (requestType)
             {
                 case RequestType.ProductsRequest:
-                    return new RequestMessage<string> {RequestType = RequestType.ProductsRequest, Payload = string.Empty};
+                    return new RequestMessage {RequestType = RequestType.ProductsRequest};
                 case RequestType.ProductDetailsRequest:
-                    return new RequestMessage<string>{ RequestType = RequestType.ProductDetailsRequest, Payload = string.Empty};
+                    return new RequestMessage { RequestType = RequestType.ProductDetailsRequest, Id = id};
                 default:
-                    return new RequestMessage<string> { RequestType = RequestType.Na};
+                    return new RequestMessage { RequestType = RequestType.Na};
             }
         }
     }
