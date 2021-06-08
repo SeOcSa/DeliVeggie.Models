@@ -4,7 +4,6 @@ namespace DeliVeggie.Models.Enums
     {
         Na,
         ProductDetailsRequest,
-        ProductsRequest,
-        AddTypo
+        ProductsRequest
     }
 }
