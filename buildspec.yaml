@@ -14,4 +14,4 @@ phases:
 artifacts:
   files:
     -'**/*'
-  base-directory: 'C:\codebuild\artifacts\
+  base-directory: 'C:\codebuild\artifacts\'
