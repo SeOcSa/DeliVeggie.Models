@@ -2,9 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     </PropertyGroup>
-
-    <ItemGroup Label="Package References">
-        <PackageReference Include="MinVer" PrivateAssets="All" Version="2.3.0" />
-    </ItemGroup>
 </Project>
