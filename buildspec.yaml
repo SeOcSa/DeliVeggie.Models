@@ -10,3 +10,7 @@ phases:
     commands:
       - dotnet build
       - dotnet pack -o .
+      
+artifacts:
+  files:
+    -'**/*'
