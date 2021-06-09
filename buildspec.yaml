@@ -8,9 +8,10 @@ phases:
       - export PATH="$PATH:/root/.dotnet/tools"
   build:
     commands:
-      - dotnet build
+      - dotnet build /p:Configuration=Release /p:OutDir=C:\codebuild\artifacts\ /p:Version='1.0.0'
       - dotnet pack -o .
       
 artifacts:
   files:
     -'**/*'
+  base-directory: 'C:\codebuild\artifacts\
