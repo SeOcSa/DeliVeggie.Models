@@ -8,8 +8,8 @@ phases:
       - export PATH="$PATH:/root/.dotnet/tools"
   build:
     commands:
-      - dotnet build /p:Configuration=Release /p:OutDir=C:\codebuild\artifacts\ /p:Version='1.0.0'
-      - dotnet pack -o .
+      - dotnet build --version-suffix '1.0.0'
+      - dotnet pack -o C:\codebuild\artifacts\
       
 artifacts:
   files:
