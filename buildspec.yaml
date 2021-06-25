@@ -15,4 +15,4 @@ phases:
   build:
     commands:
       - dotnet pack -o .
-      - dotnet nuget push *.nupkg -s codeartifact
+      - dotnet nuget push *.nupkg -s codeartifact --skip-duplicate
