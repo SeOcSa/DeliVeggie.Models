@@ -7,12 +7,11 @@ phases:
       dotnet: latest
     commands:
       - export PATH="$PATH:/root/.dotnet/tools"
-      - dotnet tool install -g AWS.CodeArtifact.NuGet.CredentialProvider
-      - dotnet codeartifact-creds install
-  pre_build:
-    commands:
-      - dotnet nuget add source -n codeartifact $(aws codeartifact get-repository-endpoint --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format nuget --query repositoryEndpoint --output text)"v3/index.json"
   build:
     commands:
       - dotnet pack -o .
-      - dotnet nuget push *.nupkg -s codeartifact --skip-duplicate
+
+artifacts:
+ files:
+   - '**/*'
+ discard-paths: yes
