@@ -3,8 +3,9 @@
 versions=aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]'
 
 echo $versions
+echo ${versions[@]}
 
-if [${versions[@]} -eq 0]; then
+if [ ${versions[@]} -eq 0 ]; then
   dotnet pack -o .
   dotnet nuget push *.nupkg -s codeartifact
 else
