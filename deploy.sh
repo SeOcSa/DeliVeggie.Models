@@ -1,6 +1,9 @@
 #!/bin/sh
 
-for [/f %i in (aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]')] do set CODEARTIFACT_VERSION = %i
+for /f %i in [aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]'] 
+do 
+  set CODEARTIFACT_VERSION = %i
+done
 
 IFS='.' read -r -a versions_array <<< CODEARTIFACT_VERSION
 
