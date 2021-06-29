@@ -2,7 +2,7 @@
 
 versions = aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]'
 
-printf versions
+echo versions
 
 for ((/f %i in versions)); do
   set CODEARTIFACT_VERSION = %i
