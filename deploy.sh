@@ -19,3 +19,4 @@ else
   version = "${majorVersion}.${midVersion}.${minorVersion}"
   dotnet pack -o . -p:version
   dotnet nuget push *.nupkg -s codeartifact
+fi
