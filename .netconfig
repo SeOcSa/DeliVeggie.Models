@@ -3,5 +3,5 @@
     path = https://deliveggie-models.s3.eu-central-1.amazonaws.com/DeliVeggie-Models-CodeBuild-S3/
     bucketName = nugets
     region = eu-central-1
-    accessKeyId = AKIAQUIP4ZTFVAKQFCNX
-    secretAccessKey = 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
+    accessKeyId = $IAM_ACCESS_KEY_ID
+    secretAccessKey = $IAM_SECRET_ACCESS_KEY
