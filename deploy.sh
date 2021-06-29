@@ -18,7 +18,7 @@ else
   midVersion=versions_array[${versions_array[1]}]
 
   version="${majorVersion}.${midVersion}.${minorVersion}"
-  echo version
+  echo $version
   dotnet pack -o . -p:$version
   dotnet nuget push *.nupkg -s codeartifact
 fi
