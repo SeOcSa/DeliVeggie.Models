@@ -6,7 +6,7 @@ echo $(aws codeartifact list-package-versions --package deliveggie.models --doma
 echo $versions
 echo ${versions[@]}
 
-if [ "${versions[@]}" = "0" ]; then
+if [ -z "$versions" ] || [ "${versions[@]}" = "0" ]; then
   dotnet pack -o .
   dotnet nuget push *.nupkg -s codeartifact
 else
