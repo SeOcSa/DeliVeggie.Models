@@ -11,7 +11,7 @@ else
 
   IFS='.' read -r -a versions_array <<< $latest_version
 
-  minorVersionValue=versions_array[${versions_array[@]}]
+  minorVersionValue=versions_array[2]
   ((minorVersionValue++))
   minorVersion=minorVersionValue
   majorVersion=versions_array[${versions_array[0]}]
