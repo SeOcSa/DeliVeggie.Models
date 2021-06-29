@@ -1,7 +1,0 @@
-[sleet "feed"]
-    type = s3
-    path = https://deliveggie-models.s3.eu-central-1.amazonaws.com/DeliVeggie-Models-CodeBuild-S3/
-    bucketName = nugets
-    region = eu-central-1
-    accessKeyId = $IAM_ACCESS_KEY_ID
-    secretAccessKey = $IAM_SECRET_ACCESS_KEY
