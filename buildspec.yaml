@@ -7,12 +7,8 @@ phases:
       dotnet: latest
     commands:
       - export PATH="$PATH:/root/.dotnet/tools"
+      - dotnet tool install -g sleet
   build:
     commands:
       - dotnet pack -o .
-
-artifacts:
- files:
-   - '**/*.nupkg'
-   - '**/*.nuspec'
- discard-paths: yes
+      - sleet push d:\nupkgsToPush
