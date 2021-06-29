@@ -22,22 +22,3 @@ else
   dotnet pack -o . -p:version
   dotnet nuget push *.nupkg -s codeartifact
 fi
-echo $versions
-echo ${versions[@]}
-
-if [ "${versions[@]}" = "0" ]; then
-  dotnet pack -o .
-  dotnet nuget push *.nupkg -s codeartifact
-else
-  latest_version=versions[${versions[@]}]
-
-  IFS='.' read -r -a versions_array <<< $latest_version
-
-  minorVersion=versions_array[${versions_array[@]}]
-  majorVersion=versions_array[${versions_array[0]}]
-  midVersion=versions_array[${versions_array[1]}]
-
-  version="${majorVersion}.${midVersion}.${minorVersion}"
-  dotnet pack -o . -p:version
-  dotnet nuget push *.nupkg -s codeartifact
-fi
