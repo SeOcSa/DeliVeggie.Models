@@ -1,8 +1,7 @@
 #!/bin/bash
 export PATH="$PATH:/root/.dotnet/tools"
 
-echo aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]'
-versions="a"
+versions=$(aws codeartifact list-package-versions --package my-package-name --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format npm --output text --query 'versions[*].[version]')
 echo $versions
 echo ${versions[@]}
 
