@@ -14,4 +14,4 @@ phases:
       - dotnet nuget add source -n codeartifact $(aws codeartifact get-repository-endpoint --domain $DOMAIN --domain-owner 043519888587 --repository $REPO --format nuget --query repositoryEndpoint --output text)"v3/index.json"
   build:
     commands:
-      - ./deploy.sh
+      - deploy.sh
